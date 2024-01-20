@@ -1,0 +1,56 @@
+@import "../../index.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 20px;
+  color: getFontColor(primary);
+  border: 1px solid transparent;
+  transition: getTransition(primary);
+
+  &:hover {
+    border-color: getBackgroundColor(accent);
+  }
+
+  &__iconLeft {
+    flex-direction: row;
+  }
+
+  &__iconRight {
+    flex-direction: row-reverse;
+  }
+
+  &__disabled {
+    opacity: 0.9;
+  }
+
+  &__primary {
+    background-color: getBackgroundColor(accent);
+    box-shadow: getBoxShadows(secondary);
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &__secondary {
+    background-color: getBackgroundColor(primary);
+  }
+
+  &__link {
+    background-color: transparent;
+    
+    &:hover {
+      border-color: getBackgroundColor(secondary-dark);
+    }
+  }
+}
+
+.label {
+
+}
+
+.icon {
+}

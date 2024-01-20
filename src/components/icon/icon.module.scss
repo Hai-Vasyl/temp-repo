@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.icon {
+  &__small {
+    font-size: 10px;
+  }
+
+  &__medium {
+    font-size: 18px;
+  }
+
+  &__large {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../../index.scss";
+
+.container {
+  border: 1px solid getBackgroundColor(secondary-dark);
+  background-color: getBackgroundColor(secondary);
+  box-shadow: getBoxShadows(primary);
+  width: 370px;
+}
+
+.title {
+  text-align: center;
+  padding: 14px 25px;
+  font-size: 1.4em;
+  color: getFontColor(secondary);
+  border-bottom: 1px solid getBackgroundColor(secondary-dark);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  padding-bottom: 0;
+  gap: 4px
+}
+
+.buttons {
+  padding: 25px;
+  padding-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

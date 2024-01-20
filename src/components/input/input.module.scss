@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+
+}
+
+.input {
+  width: 100%;
+  padding: 7px;
+  background-color: getBackgroundColor(primary);
+  border: 1px solid getBackgroundColor(secondary-dark);
+
+  &__error{
+    border-color: getBackgroundColor(danger);
+  }
+}
+
+.error {
+  height: 18px;
+  font-size: getFontSize(secondary);
+  color: getFontColor(danger)
+}

@@ -1,0 +1,115 @@
+// font colors
+
+$fontColors: (
+  primary: #000000,
+  secondary: #686868,
+  accent: #ffa500,
+  danger: red,
+);
+
+@function getFontColor($color) {
+  @return map-get($fontColors, $color);
+}
+
+// background colors
+
+$backgroundColors: (
+  primary: #ffffff,
+  secondary: #ebebeb,
+  secondary-dark: #cecece,
+  accent: #ffa500,
+  danger: red,
+);
+
+@function getBackgroundColor($color) {
+  @return map-get($backgroundColors, $color);
+}
+
+// fonts
+
+$fonts:( 
+  primary: ("Roboto", sans-serif)
+);
+
+@function getFont($font) {
+  @return map-get($fonts, $font);
+}
+
+// font sizes 
+
+$fontSizes: (
+  primary: 1rem,
+  secondary: 0.9rem
+);
+
+@function getFontSize($fontSize) {
+  @return map-get($fontSizes, $fontSize);
+}
+
+// box shadows 
+
+$boxShadows: (
+  primary: rgba(0, 0, 0, 0.4) 0px 30px 90px,
+  secondary: rgba(99, 99, 99, 0.3) 0px 2px 6px 0px,
+);
+
+@function getBoxShadows($shadow) {
+  @return map-get($boxShadows, $shadow);
+}
+
+// transitions
+
+$transitions: (
+  primary: 0.3s ease
+);
+
+@function getTransition($transition) {
+  @return map-get($transitions, $transition);
+}
+
+// reset basic styles
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body {
+  font-family: getFont(primary);
+  background-color: getBackgroundColor(primary);
+  font-size: getFontSize(primary);
+}
+
+button,
+input,
+select {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: getColor(font);
+  outline: none;
+  background-color: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: none;
+}
+
+a {
+  color: getColor(accent);
+  text-decoration: none;
+  
+  &:hover {
+    color: getColor(accent-second);
+  }
+}
